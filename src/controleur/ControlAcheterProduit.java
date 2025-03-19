@@ -15,5 +15,16 @@ public class ControlAcheterProduit {
 		this.controlTrouverEtalVendeur = controlTrouverEtalVendeur;
 	}
 
-	//TODO a completer
+	public String[] nomVendeurProduit(String produit) {
+		int taille = village.rechercherVendeursProduit(produit).length;
+		String[] donnees = new String[taille];
+		for(int i=0; i<taille;i++) {
+			donnees[i] = village.rechercherVendeursProduit(produit)[i].getNom();
+		}
+		return donnees;
+	}
+	
+	public void acheterEtalVendeur(String vendeur) {
+		
+	}
 }

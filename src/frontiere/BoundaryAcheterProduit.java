@@ -10,6 +10,13 @@ public class BoundaryAcheterProduit {
 	}
 
 	public void acheterProduit(String nomAcheteur) {
-		// TODO Ã  completer
+		String produit = Clavier.entrerChaine("Quel produit voulez-vous acheter ?");
+		String[] donnees = controlAcheterProduit.nomVendeurProduit(produit);
+		System.out.println("Chez quel commerçant voulez-vous acheter des fleurs ?");
+		for (int i=0;i<donnees.length;i++) {
+			System.out.println((i+1) + " - " + donnees[i]);
+		}
+		int x = Clavier.entrerEntier("");
+		controlAcheterProduit.acheterEtalVendeur(donnees[x-1]);
 	}
 }

@@ -25,6 +25,5 @@ public class ControlAcheterProduit {
 	}
 	
 	public void acheterEtalVendeur(String vendeur) {
-		
 	}
 }

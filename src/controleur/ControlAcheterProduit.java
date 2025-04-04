@@ -28,12 +28,12 @@ public class ControlAcheterProduit {
 	public int[] acheterEtalVendeur(String vendeur, int nb) {
 		Etal etal = controlTrouverEtalVendeur.trouverEtalVendeur(vendeur);
 		int quantite = etal.getQuantite();
-		if (etal.getQuantite()>nb) {
+		if (etal.getQuantite()>=nb) {
 			etal.acheterProduit(nb);
 			return new int[] {0};
 		} else if (etal.getQuantite()>1 && etal.getQuantite()<nb) {
 			etal.acheterProduit(nb);
-			return new int[] {1, quantite - nb};
+			return new int[] {1, quantite};
 		} else {
 			return new int[] {2};
 		}

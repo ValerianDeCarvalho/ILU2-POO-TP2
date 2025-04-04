@@ -26,6 +26,12 @@ class ControlPrendreEtalTest {
 		ControlVerifierIdentite controlVerifierIdentite = new ControlVerifierIdentite(village);
 		ControlPrendreEtal controlPrendreEtal = new ControlPrendreEtal(controlVerifierIdentite,village);
 		assertNotNull(controlPrendreEtal, "Constructeur ne renvoie pas null");
+		assertEquals(controlPrendreEtal.prendreEtal("John", "fleurs", 10), -1);
+		assertFalse(controlPrendreEtal.verifierIdentite("John"));
+		ControlEmmenager controlEmmenager = new ControlEmmenager(village);
+		controlEmmenager.ajouterGaulois("John", 5);
+		assertEquals(controlPrendreEtal.prendreEtal("John", "fleurs", 5), 0);
+		assertTrue(controlPrendreEtal.verifierIdentite("John"));
 		System.out.println("testControlLibererEtal : OK \n");
 	}
 	
@@ -41,7 +47,6 @@ class ControlPrendreEtalTest {
 		}
 		assertEquals(village.donnerNbEtal(), 5);
 		assertFalse(controlPrendreEtal.resteEtals());
-		System.out.println("testControlLibererEtal : OK \n");
+		System.out.println("testResteEtals : OK \n");
 	}
-	
 }

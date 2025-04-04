@@ -35,6 +35,7 @@ class ControlVerifierIdentiteTest {
 		village.ajouterHabitant(gaulois);
 		assertTrue(controlVerifierIdentite.verifierIdentite("Abraracourcix"));
 		assertTrue(controlVerifierIdentite.verifierIdentite("John"));
+		assertFalse(controlVerifierIdentite.verifierIdentite("Obelix"));
 		System.out.println("testVerifierIdentite : OK \n");
 	}
 

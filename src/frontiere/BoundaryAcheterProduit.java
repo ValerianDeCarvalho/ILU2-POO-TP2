@@ -11,7 +11,7 @@ public class BoundaryAcheterProduit {
     }
 
     public void acheterProduit(String nomAcheteur) {
-        if (!controlAcheterProduit.verifierIdentite(nomAcheteur)) {
+        if (!controlAcheterProduit.acheterVerifierIdentite(nomAcheteur)) {
             System.out.println("Je suis désolée " + nomAcheteur + ", il faut être un habitant de notre village pour commercer ici.");
             return;
         }

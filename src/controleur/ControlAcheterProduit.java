@@ -17,7 +17,7 @@ public class ControlAcheterProduit {
         this.controlTrouverEtalVendeur = controlTrouverEtalVendeur;
     }
 
-    public boolean verifierIdentite(String nomVendeur) {
+    public boolean acheterVerifierIdentite(String nomVendeur) {
         return controlVerifierIdentite.verifierIdentite(nomVendeur);
     }
 
